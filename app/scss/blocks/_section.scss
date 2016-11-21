@@ -1,0 +1,54 @@
+.section {
+
+  &--invert-color {
+    color: #fff;
+  }
+
+  &--bg-blue {
+    background-color: #048ab9;
+  }
+
+  &--bg-dark-blue {
+    background-color: #024f6a;
+  }
+
+  &--bg-gray {
+    background-color: $light-color;
+  }
+
+  &--bg-red {
+    background-color: $accent-color;
+  }
+}
+
+.section__inner {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.section__header {
+  margin-bottom: 45px;
+}
+
+.section__title {
+  margin: 0;
+  margin-bottom: 5px;
+  font-weight: normal;
+  font-size: rem(45);
+}
+
+.section__subtitle {
+  font-size: rem(30);
+  p {
+    margin-bottom: 0;
+  }
+
+  em {
+    font-style: normal;
+    color: $accent-color;
+  }
+}
+
+.section__content {
+
+}

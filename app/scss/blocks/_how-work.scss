@@ -1,0 +1,97 @@
+.how-work {
+  background-color: #048ab9;
+  background-image: url("img/how-work/submarine.png");
+  background-image: image-set(
+    url("img/how-work/submarine.png") 1x,
+    url("img/how-work/submarine@2x.png") 2x
+  );
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-position: calc(50% + (1000px / 2.5)) 100%;
+}
+
+.how-work__inner {
+  background: url("img/how-work/fish.png") no-repeat 100% 0;
+  background-image: image-set(
+    url("img/how-work/fish.png") 1x,
+    url("img/how-work/fish@2x.png") 2x
+  );
+}
+
+.how-work-slider {
+  @include clear-list();
+}
+
+.how-work-slide {
+  font-size: rem(18);
+}
+
+.how-work-slide__title {
+  margin: 0;
+  margin-bottom: 1em;
+  font-size: rem(24);
+  font-weight: normal;
+  max-width: 50%;
+}
+
+.how-work-slide__text {
+  padding-right: 2em;
+}
+
+.how-work-pager {
+}
+
+.how-work-pager__dots {
+  @include clear-list();
+  margin-bottom: 40px;
+  font-size: 24px;
+  color: #fff;
+
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 42px;
+    position: relative;
+
+    &::after {
+      content: "";
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      width: 42px;
+      height: 2px;
+      background-color: #bfdce0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #bfdce0;
+    background: none;
+    font: inherit;
+    color: currentColor;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.45s;
+
+    &:hover {
+      background-color: rgba(#bfdce0, 0.3);
+    }
+  }
+
+  .slick-active button {
+    background-color: #bfdce0;
+    color: #048ab9;
+  }
+}

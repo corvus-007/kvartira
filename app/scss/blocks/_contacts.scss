@@ -1,0 +1,40 @@
+.contacts {
+  @include clearfix();
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.contacts-map {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: #bd5;
+}
+
+.contacts-info {
+  padding: 60px;
+  position: relative;
+  float: right;
+  background-color: #fff;
+}
+
+.contacts-info__logo {
+  margin-bottom: 1em;
+}
+
+.contacts-info__list {
+  @include clear-list();
+  @include border-rounded();
+}
+
+.contacts-info__item {
+  margin-bottom: 1em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+}

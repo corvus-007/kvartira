@@ -1,0 +1,31 @@
+.why-we {
+
+}
+
+.why-we__features-list {
+  @include clear-list();
+  display: flex;
+  justify-content: space-between;
+}
+
+.why-we__feature {
+  text-align: center;
+  margin-right: 30px;
+  color: #00b7f7;
+
+  &::before {
+    content: "";
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    display: block;
+    width: 54px;
+    height: 54px;
+    background: url("img/svg-icons/checked.svg") no-repeat center;
+    background-size: contain;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,23 @@
+.main-panel {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.main-panel__inner {
+  display: flex;
+  align-items: center;
+}
+
+.main-panel__logo {
+  margin-right: auto;
+}
+
+.main-panel__phone {
+  font-size: rem(24);
+}
+
+.main-panel__callback {
+  margin-left: 25px;
+}
+
+

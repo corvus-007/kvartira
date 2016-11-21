@@ -1,0 +1,220 @@
+.testimonials {
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonials-slider-photos {
+  @include clear-list();
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border: 15px solid $light-color;
+    border-radius: 50%;
+    top: -15px;
+    right: -15px;
+    z-index: 55;
+    pointer-events: none;
+  }
+
+  .slick-list {
+    border-radius: 130px 130px 0 0;
+  }
+
+}
+
+.testimonials-slide-photo {
+  text-align: center;
+}
+
+.testimonials-slide-photo__image {
+  width: 260px;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 20px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.testimonials-slide-photo__origin-link {
+  font-size: rem(15);
+}
+
+
+.testimonials-slider-info {
+  @include clear-list();
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: 50vw;
+    height: 85px;
+    background-color: $light-color;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    bottom: 0;
+    z-index: 1;
+    border: none;
+    background: #048ab9;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-indent: -1000px;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 36px;
+      height: 36px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  .slick-prev {
+    right: 85px;
+    background-color: #048ab9;
+
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M31 15H3.4l8.3-8.3c.4-.4.4-1 0-1.4-.4-.4-1-.4-1.4 0l-10 10c-.3.3-.3 1 0 1.3l10 10c.4.3 1 .3 1.4 0 .4-.5.4-1 0-1.5l-8.3-8H31c.7 0 1-.4 1-1s-.3-1-1-1z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    }
+    &:hover {
+      background-color: mix(#fff, #048ab9, 10%);
+    }
+  }
+
+  .slick-next {
+    right: 0;
+    background-color: #024f6a;
+
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M32 16c0-.3 0-.5-.3-.7l-10-10c-.3-.4-1-.4-1.3 0-.4.4-.4 1 0 1.4l8.2 8.3H1c-.6 0-1 .5-1 1s.4 1 1 1h27.6l-8.2 8.3c-.4.4-.4 1 0 1.4.4.4 1 .4 1.4 0l10-10 .2-.7z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    }
+    &:hover {
+      background-color: mix(#fff, #024f6a, 10%);
+    }
+  }
+
+}
+
+.testimonials-slide-info {
+  dl {
+    @include clear-list();
+    margin-bottom: 35px;
+  }
+
+  dt {
+    margin: 0;
+    font-weight: 700;
+  }
+
+  dd + dt {
+    margin-top: 1em;
+  }
+
+  dd {
+    margin: 0;
+  }
+
+  P {
+    font-weight: 700;
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.testimonials-slide-info__title {
+  display: block;
+  margin: 0;
+  margin-bottom: 35px;
+  font-size: rem(24);
+  font-weight: 700;
+  max-width: 400px;
+}
+
+.testimonials-slide-info__benefit {
+  background-color: $success-color;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+
+.testimonials-slider-messages {
+  @include clear-list();
+  padding-top: 66px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 33px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $light-color;
+  }
+}
+
+.testimonials-slide-message__person {
+  margin-left: auto;
+  margin-right: auto;
+  width: 260px;
+  text-align: center;
+}
+
+.testimonials-slide-message__avatar {
+  width: 76px;
+  height: 76px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 50%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.testimonials-slide-message__name {
+  font-size: rem(24);
+}
+
+.testimonials-slide-message__status {
+  margin-bottom: 5px;
+}
+
+.testimonials-slide-message__origin-link {
+  font-size: rem(15);
+}
+
+.testimonials-slide-message__text {
+
+}
